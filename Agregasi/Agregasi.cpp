@@ -12,10 +12,10 @@ int main(){
     anak* varAnak2 = new anak("rini");
     anak* varAnak3 = new anak("dewi");
 
-    varIbu->tambahanAnak(varAnak1);
-    varIbu->tambahanAnak(varAnak2);
-    varIbu->tambahanAnak(varAnak3);
-    varIbu->tambahanAnak(varAnak1);
+    varIbu->tambahAnak(varAnak1);
+    varIbu->tambahAnak(varAnak2);
+    varIbu2->tambahAnak(varAnak3);
+    varIbu2->tambahAnak(varAnak1);
 
     varIbu->cetakAnak();
     varIbu2->cetakAnak();
@@ -26,6 +26,9 @@ int main(){
     delete varAnak2;
     delete varAnak3;
 
+    system("pause");
+
+    return 0;
 
 }
 
