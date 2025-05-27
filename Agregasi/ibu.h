@@ -1,7 +1,11 @@
+#include <iostream>
+#include <vector>
+#include "anak.h"
+#include <string>
 #ifndef IBU_H
 #define IBU_H
 
-class ibu {
+class ibu{
     public:
         string nama;
         vector<anak*> daftar_anak;
@@ -10,19 +14,21 @@ class ibu {
             cout << "Ibu \"" << nama << "\" ada\n";
         }
 
-        ibu(){
+        ~ibu() {
             cout << "Ibu \"" << nama << "\" tidak ada\n";
         }
-        void tambahanAnak(anak*);
+        void tambahAnak(anak*);
         void cetakAnak();
 };
-void ibu::tambahkanAnak(){
-    cout << "Daftar Anak dari ibu \"" <<
+void ibu::tambahAnak(anak* pAnak) {
+    daftar_anak.push_back(pAnak);
+}
+void ibu::cetakAnak() {
+    cout << "Daftar Anak dari Ibu \"" <<
     this->nama << "\":\n";
-    for (int i = 0; i < daftar_anak.size(): i++){
+    for (int i = 0; i < daftar_anak.size(); i++){
         cout << daftar_anak[i]->nama << endl;
     }
     cout << endl;
-
-} 
+}
 #endif
